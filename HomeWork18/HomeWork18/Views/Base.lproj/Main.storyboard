@@ -70,7 +70,7 @@
                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="buY-9K-HXn">
                                                                         <rect key="frame" x="-2" y="0.0" width="222" height="31"/>
                                                                         <connections>
-                                                                            <action selector="redColorAction:" destination="kb8-ma-x1k" eventType="valueChanged" id="j1X-VJ-D5R"/>
+                                                                            <action selector="redColorAction" destination="kb8-ma-x1k" eventType="valueChanged" id="kcD-cR-qVs"/>
                                                                         </connections>
                                                                     </slider>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nxZ-AE-ALJ">
@@ -81,7 +81,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                         <connections>
-                                                                            <action selector="redColorTFAction:" destination="kb8-ma-x1k" eventType="editingChanged" id="7sM-ZK-4Aj"/>
+                                                                            <action selector="redColorTFAction" destination="kb8-ma-x1k" eventType="editingChanged" id="fRR-e1-lKG"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -103,7 +103,7 @@
                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qer-JA-49U">
                                                                         <rect key="frame" x="-2" y="0.0" width="222" height="31"/>
                                                                         <connections>
-                                                                            <action selector="greenColorAction:" destination="kb8-ma-x1k" eventType="valueChanged" id="jgE-TY-MIn"/>
+                                                                            <action selector="greenColorAction" destination="kb8-ma-x1k" eventType="valueChanged" id="B9w-Fi-QoO"/>
                                                                         </connections>
                                                                     </slider>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alA-5B-o3v">
@@ -114,7 +114,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                         <connections>
-                                                                            <action selector="greenColorTFAction:" destination="kb8-ma-x1k" eventType="editingChanged" id="ryA-pc-Aow"/>
+                                                                            <action selector="greenColorTFAction" destination="kb8-ma-x1k" eventType="editingChanged" id="xik-mQ-ehy"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -136,7 +136,7 @@
                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vr8-AP-lre">
                                                                         <rect key="frame" x="-2" y="0.0" width="222" height="35"/>
                                                                         <connections>
-                                                                            <action selector="blueColorAction:" destination="kb8-ma-x1k" eventType="valueChanged" id="Q7v-eb-xtt"/>
+                                                                            <action selector="blueColorAction" destination="kb8-ma-x1k" eventType="valueChanged" id="dVj-9I-xrB"/>
                                                                         </connections>
                                                                     </slider>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Pc-0I-QGB">
@@ -147,7 +147,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                         <connections>
-                                                                            <action selector="blueColorTFAction:" destination="kb8-ma-x1k" eventType="editingChanged" id="O73-yd-3zy"/>
+                                                                            <action selector="blueColorTFAction" destination="kb8-ma-x1k" eventType="editingChanged" id="dV4-Ki-hBC"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -190,7 +190,7 @@
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NRe-gK-tY7">
                                                                 <rect key="frame" x="-2" y="0.0" width="222" height="35"/>
                                                                 <connections>
-                                                                    <action selector="opacityAction:" destination="kb8-ma-x1k" eventType="valueChanged" id="nKD-gQ-1Fu"/>
+                                                                    <action selector="opacityAction" destination="kb8-ma-x1k" eventType="valueChanged" id="mag-y4-8QG"/>
                                                                 </connections>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fdc-K3-DTe">
@@ -201,7 +201,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="opacityTFAction:" destination="kb8-ma-x1k" eventType="editingChanged" id="NOS-7M-cvx"/>
+                                                                    <action selector="opacityTFAction" destination="kb8-ma-x1k" eventType="editingChanged" id="pcd-fT-03g"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>
@@ -233,7 +233,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save with Delegates"/>
                                         <connections>
-                                            <action selector="saveWithDelegates:" destination="kb8-ma-x1k" eventType="touchUpInside" id="2Ts-1W-lxc"/>
+                                            <action selector="saveWithDelegates" destination="kb8-ma-x1k" eventType="touchUpInside" id="ItO-QB-ie6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hK-GL-FW2">
@@ -244,7 +244,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save with Closure"/>
                                         <connections>
-                                            <action selector="saveWithClouser:" destination="kb8-ma-x1k" eventType="touchUpInside" id="hRf-LM-jaR"/>
+                                            <action selector="saveWithClouser" destination="kb8-ma-x1k" eventType="touchUpInside" id="iee-JK-eWM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -267,10 +267,13 @@
                         <outlet property="greenColorSlider" destination="Qer-JA-49U" id="9mG-Xe-ATf"/>
                         <outlet property="greenColorTF" destination="alA-5B-o3v" id="cnU-81-rVc"/>
                         <outlet property="hexColorTF" destination="kmd-UC-sKv" id="33L-Y2-ntR"/>
+                        <outlet property="mainView" destination="IOP-S6-FAu" id="HSI-Gd-VXx"/>
                         <outlet property="opacitySlider" destination="NRe-gK-tY7" id="B0T-6B-iqz"/>
                         <outlet property="opacityTF" destination="Fdc-K3-DTe" id="42f-p3-n5A"/>
                         <outlet property="redColorSlider" destination="buY-9K-HXn" id="XQh-Zq-8PU"/>
                         <outlet property="redColorTF" destination="nxZ-AE-ALJ" id="JWl-sv-BIb"/>
+                        <outlet property="saveClosure" destination="4hK-GL-FW2" id="9E3-B4-6xy"/>
+                        <outlet property="saveDelegate" destination="1Hx-xf-mba" id="WK8-ke-f5S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ct6-E0-141" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

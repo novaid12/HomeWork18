@@ -1,0 +1,33 @@
+
+/* Class = "UIButton"; configuration.title = "Save with Delegates"; ObjectID = "1Hx-xf-mba"; */
+"1Hx-xf-mba.configuration.title" = "Save with Delegates";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1Hx-xf-mba"; */
+"1Hx-xf-mba.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Green"; ObjectID = "3XJ-ZY-KcZ"; */
+"3XJ-ZY-KcZ.text" = "Green";
+
+/* Class = "UIButton"; configuration.title = "Save with Closure"; ObjectID = "4hK-GL-FW2"; */
+"4hK-GL-FW2.configuration.title" = "Save with Closure";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4hK-GL-FW2"; */
+"4hK-GL-FW2.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Blue"; ObjectID = "GRI-bG-en4"; */
+"GRI-bG-en4.text" = "Blue";
+
+/* Class = "UIButton"; configuration.title = "ChangedBG"; ObjectID = "gqk-k5-Eeh"; */
+"gqk-k5-Eeh.configuration.title" = "ChangedBG";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gqk-k5-Eeh"; */
+"gqk-k5-Eeh.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Hex Color #"; ObjectID = "jms-8Y-o8q"; */
+"jms-8Y-o8q.text" = "Hex Color #";
+
+/* Class = "UITextField"; placeholder = "#ffffff"; ObjectID = "kmd-UC-sKv"; */
+"kmd-UC-sKv.placeholder" = "#ffffff";
+
+/* Class = "UILabel"; text = "Red"; ObjectID = "zsx-8f-8hM"; */
+"zsx-8f-8hM.text" = "Red";

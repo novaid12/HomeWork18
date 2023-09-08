@@ -23,7 +23,10 @@ class ChangedVC: UIViewController {
     @IBOutlet var opacityTF: UITextField!
 
     @IBOutlet var colorView: UIView!
+    @IBOutlet var mainView: UIView!
 
+    @IBOutlet weak var saveDelegate: UIButton!
+    @IBOutlet var saveClosure: UIButton!
     @IBOutlet var centerContraints: NSLayoutConstraint!
 
     var colorModel: ColorModel?
@@ -49,6 +52,11 @@ class ChangedVC: UIViewController {
                                  Int(redColorSlider.value * 255),
                                  Int(greenColorSlider.value * 255),
                                  Int(blueColorSlider.value * 255))
+        mainView.layer.cornerRadius = 25
+        saveDelegate.layer.cornerRadius = 25
+        saveDelegate.layer.masksToBounds = true
+        saveClosure.layer.cornerRadius = 25
+        saveClosure.layer.masksToBounds = true
     }
 
     private func startKeyboardObserver() {
@@ -117,35 +125,35 @@ class ChangedVC: UIViewController {
         colorView.backgroundColor = UIColor(red: cM.red, green: cM.green, blue: cM.blue, alpha: cM.alpha)
     }
 
-    @IBAction func redColorAction(_ sender: UISlider) {
+    @IBAction func redColorAction() {
         updateColorSlider()
     }
 
-    @IBAction func redColorTFAction(_ sender: UITextField) {
+    @IBAction func redColorTFAction() {
         updateColorTF()
     }
 
-    @IBAction func greenColorAction(_ sender: UISlider) {
+    @IBAction func greenColorAction() {
         updateColorSlider()
     }
 
-    @IBAction func greenColorTFAction(_ sender: UITextField) {
+    @IBAction func greenColorTFAction() {
         updateColorTF()
     }
 
-    @IBAction func blueColorAction(_ sender: UISlider) {
+    @IBAction func blueColorAction() {
         updateColorSlider()
     }
 
-    @IBAction func blueColorTFAction(_ sender: UITextField) {
+    @IBAction func blueColorTFAction() {
         updateColorTF()
     }
 
-    @IBAction func opacityAction(_ sender: UISlider) {
+    @IBAction func opacityAction() {
         updateColorSlider()
     }
 
-    @IBAction func opacityTFAction(_ sender: UITextField) {
+    @IBAction func opacityTFAction() {
         updateColorTF()
     }
 
@@ -167,14 +175,14 @@ class ChangedVC: UIViewController {
         colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 
-    @IBAction func saveWithDelegates(_ sender: UIButton) {
+    @IBAction func saveWithDelegates() {
         delegate?.onColorUpdate(color: ColorModel(red: CGFloat(redColorSlider.value), green: CGFloat(greenColorSlider.value), blue: CGFloat(blueColorSlider.value), alpha: CGFloat(opacitySlider.value)))
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
 
-    @IBAction func saveWithClouser(_ sender: UIButton) {
+    @IBAction func saveWithClouser() {
         guard let complitonHandler = complitonHandler else { return }
         complitonHandler(ColorModel(red: CGFloat(redColorSlider.value), green: CGFloat(greenColorSlider.value), blue: CGFloat(blueColorSlider.value), alpha: CGFloat(opacitySlider.value)))
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
 }
