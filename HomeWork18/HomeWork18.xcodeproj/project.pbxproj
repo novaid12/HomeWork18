@@ -17,6 +17,7 @@
 		98645AF62AA890E1009C8A00 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98645AF52AA890E1009C8A00 /* ColorModel.swift */; };
 		98645AFC2AA8C9FA009C8A00 /* UIColorExtencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98645AFB2AA8C9FA009C8A00 /* UIColorExtencion.swift */; };
 		98645AFE2AA8D8B8009C8A00 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98645AFD2AA8D8B8009C8A00 /* UIViewControllerExt.swift */; };
+		98979B1B2AABB89400DD1D5B /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98979B1A2AABB89400DD1D5B /* UIButtonExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		98645AF52AA890E1009C8A00 /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
 		98645AFB2AA8C9FA009C8A00 /* UIColorExtencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtencion.swift; sourceTree = "<group>"; };
 		98645AFD2AA8D8B8009C8A00 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		98979B1A2AABB89400DD1D5B /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				98645AFB2AA8C9FA009C8A00 /* UIColorExtencion.swift */,
 				98645AFD2AA8D8B8009C8A00 /* UIViewControllerExt.swift */,
+				98979B1A2AABB89400DD1D5B /* UIButtonExt.swift */,
 			);
 			path = Extencions;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				98645ADC2AA8848D009C8A00 /* SceneDelegate.swift in Sources */,
 				98645AFE2AA8D8B8009C8A00 /* UIViewControllerExt.swift in Sources */,
 				98645AF62AA890E1009C8A00 /* ColorModel.swift in Sources */,
+				98979B1B2AABB89400DD1D5B /* UIButtonExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

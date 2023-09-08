@@ -8,6 +8,10 @@
 import UIKit
 
 class ChangedVC: UIViewController {
+    var colorModel: ColorModel?
+    var delegate: ColorBGUpdateProtocol?
+    var complitonHandler: ((ColorModel) -> ())?
+
     @IBOutlet var redColorSlider: UISlider!
     @IBOutlet var redColorTF: UITextField!
 
@@ -29,9 +33,6 @@ class ChangedVC: UIViewController {
     @IBOutlet var saveClosure: UIButton!
     @IBOutlet var centerContraints: NSLayoutConstraint!
 
-    var colorModel: ColorModel?
-    var delegate: ColorBGUpdateProtocol?
-    var complitonHandler: ((ColorModel) -> ())?
 
     override func viewDidLoad() {
         SetupUI()
@@ -52,11 +53,8 @@ class ChangedVC: UIViewController {
                                  Int(redColorSlider.value * 255),
                                  Int(greenColorSlider.value * 255),
                                  Int(blueColorSlider.value * 255))
-        mainView.layer.cornerRadius = 25
-        saveDelegate.layer.cornerRadius = 25
-        saveDelegate.layer.masksToBounds = true
-        saveClosure.layer.cornerRadius = 25
-        saveClosure.layer.masksToBounds = true
+        mainView.roundCorners([.topLeft, .topRight], radius: 25)
+        saveClosure.roundCorners([.bottomLeft, .bottomRight], radius: 25)
     }
 
     private func startKeyboardObserver() {
@@ -119,6 +117,7 @@ class ChangedVC: UIViewController {
         hexColorTF.text = String(format: "%02X%02X%02X%02X", Int(cM.red * 255), Int(cM.green * 255),
                                  Int(cM.blue * 255), Int(cM.alpha * 255))
         redColorSlider.value = Float(cM.red)
+
         greenColorSlider.value = Float(cM.green)
         blueColorSlider.value = Float(cM.blue)
         opacitySlider.value = Float(cM.alpha)
