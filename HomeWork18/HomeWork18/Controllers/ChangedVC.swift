@@ -55,6 +55,7 @@ class ChangedVC: UIViewController {
                                  Int(blueColorSlider.value * 255))
         mainView.roundCorners([.topLeft, .topRight], radius: 25)
         saveClosure.roundCorners([.bottomLeft, .bottomRight], radius: 25)
+        colorView.layer.cornerRadius = 25
     }
 
     private func startKeyboardObserver() {
