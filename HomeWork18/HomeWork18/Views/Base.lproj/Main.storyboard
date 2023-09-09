@@ -3,6 +3,7 @@
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,27 +18,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqk-k5-Eeh">
-                                <rect key="frame" x="264" y="128" width="141" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="slider.vertical.3" catalog="system" title="ChangedBG"/>
-                                <connections>
-                                    <action selector="changedBGAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FRE-bQ-oMA"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUO-xt-TbC">
+                                <rect key="frame" x="25" y="128" width="380" height="126"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Background Color" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VVs-p6-hf1">
+                                        <rect key="frame" x="15" y="52" width="236" height="22"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqk-k5-Eeh">
+                                        <rect key="frame" x="265" y="33" width="100" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="BBZ-CG-dNC"/>
+                                            <constraint firstAttribute="height" constant="60" id="YWc-NG-vpi"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <imageReference key="image" image="paintbrush.pointed" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="changedBGAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FRE-bQ-oMA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstItem="VVs-p6-hf1" firstAttribute="leading" secondItem="HUO-xt-TbC" secondAttribute="leading" constant="15" id="04Q-5c-IAD"/>
+                                    <constraint firstItem="gqk-k5-Eeh" firstAttribute="leading" secondItem="VVs-p6-hf1" secondAttribute="trailing" constant="14" id="Gpz-5a-HoB"/>
+                                    <constraint firstItem="gqk-k5-Eeh" firstAttribute="top" secondItem="HUO-xt-TbC" secondAttribute="top" constant="33" id="X2U-QX-xHt"/>
+                                    <constraint firstAttribute="bottom" secondItem="gqk-k5-Eeh" secondAttribute="bottom" constant="33" id="aJ0-Rn-gVb"/>
+                                    <constraint firstItem="VVs-p6-hf1" firstAttribute="top" secondItem="HUO-xt-TbC" secondAttribute="top" constant="52" id="jH0-YD-Ss6"/>
+                                    <constraint firstAttribute="bottom" secondItem="VVs-p6-hf1" secondAttribute="bottom" constant="52" id="tJY-ui-rMB"/>
+                                    <constraint firstAttribute="trailing" secondItem="gqk-k5-Eeh" secondAttribute="trailing" constant="15" id="yJF-bc-eg9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gqk-k5-Eeh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="6SJ-IO-qhB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gqk-k5-Eeh" secondAttribute="trailing" constant="25" id="PNo-Dd-Lun"/>
+                            <constraint firstItem="HUO-xt-TbC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="CO3-Cx-DSE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HUO-xt-TbC" secondAttribute="trailing" constant="25" id="SwC-ZB-hQx"/>
+                            <constraint firstItem="HUO-xt-TbC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="VcY-Ur-yuD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ee-kN-UXs"/>
+                    <connections>
+                        <outlet property="changeBGBtn" destination="gqk-k5-Eeh" id="TcU-sO-ayc"/>
+                        <outlet property="mainView" destination="HUO-xt-TbC" id="MOe-K7-7zx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="851" y="-35"/>
         </scene>
         <!--ChangedVC-->
         <scene sceneID="PWh-io-qdo">
@@ -192,7 +230,7 @@
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NRe-gK-tY7">
                                                                 <rect key="frame" x="-2" y="0.0" width="222" height="35"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
-                                                                <color key="minimumTrackTintColor" red="0.63137254901960782" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="maximumTrackTintColor" systemColor="labelColor"/>
                                                                 <connections>
                                                                     <action selector="opacityAction" destination="kb8-ma-x1k" eventType="valueChanged" id="mag-y4-8QG"/>
@@ -235,7 +273,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.86506980657577515" green="0.93327468633651733" blue="0.96276098489761353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="oa4-SK-ea0" firstAttribute="leading" secondItem="IOP-S6-FAu" secondAttribute="leading" constant="20" id="IGH-E1-vKG"/>
                                             <constraint firstAttribute="bottom" secondItem="oa4-SK-ea0" secondAttribute="bottom" constant="20" id="Tu2-uR-DAQ"/>
@@ -309,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ct6-E0-141" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1928.3720930232557" y="-35.407725321888414"/>
+            <point key="canvasLocation" x="1553" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HAc-aS-D9Q">
@@ -331,7 +369,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="slider.vertical.3" catalog="system" width="128" height="110"/>
+        <image name="paintbrush.pointed" catalog="system" width="128" height="118"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -346,6 +384,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

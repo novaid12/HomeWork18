@@ -12,7 +12,15 @@ protocol ColorBGUpdateProtocol {
 }
 
 class MainVC: UIViewController {
+    @IBOutlet weak var changeBGBtn: UIButton!
+    @IBOutlet weak var mainView: UIView!
     var colorModel: ColorModel?
+    
+    override func viewDidLoad() {
+        mainView.roundCorners([.topLeft, .bottomRight], radius: 50)
+        changeBGBtn.roundCorners([.topLeft, .bottomRight], radius: 50)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
