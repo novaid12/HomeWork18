@@ -33,6 +33,7 @@ final class ChangedVC: UIViewController {
     @IBOutlet var saveClosure: UIButton!
     @IBOutlet var centerContraints: NSLayoutConstraint!
 
+    @IBOutlet weak var navBar: UINavigationBar!
     override func viewDidLoad() {
         SetupUI()
     }
@@ -86,6 +87,7 @@ final class ChangedVC: UIViewController {
                                  Int(cM.blue * 255), Int(cM.alpha * 255))
         colorView.backgroundColor = UIColor(red: cM.red, green: cM.green, blue: cM.blue, alpha: cM.alpha)
         view.backgroundColor = UIColor(red: cM.red, green: cM.green, blue: cM.blue, alpha: cM.alpha)
+        navBar.backgroundColor = UIColor(red: cM.red, green: cM.green, blue: cM.blue, alpha: 1)
     }
 
     private func updateColorSlider() {

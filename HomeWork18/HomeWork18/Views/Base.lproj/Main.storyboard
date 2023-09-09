@@ -19,26 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUO-xt-TbC">
-                                <rect key="frame" x="25" y="128" width="380" height="126"/>
+                                <rect key="frame" x="25" y="753" width="380" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Background Color" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VVs-p6-hf1">
-                                        <rect key="frame" x="15" y="52" width="236" height="22"/>
-                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqk-k5-Eeh">
-                                        <rect key="frame" x="265" y="33" width="100" height="60"/>
+                                        <rect key="frame" x="30" y="30" width="320" height="60"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="BBZ-CG-dNC"/>
-                                            <constraint firstAttribute="height" constant="60" id="YWc-NG-vpi"/>
+                                            <constraint firstAttribute="height" constant="60" id="Qkc-TS-aBy"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
+                                        <buttonConfiguration key="configuration" style="filled" title="Change Background Color">
                                             <imageReference key="image" image="paintbrush.pointed" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -49,13 +43,10 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstItem="VVs-p6-hf1" firstAttribute="leading" secondItem="HUO-xt-TbC" secondAttribute="leading" constant="15" id="04Q-5c-IAD"/>
-                                    <constraint firstItem="gqk-k5-Eeh" firstAttribute="leading" secondItem="VVs-p6-hf1" secondAttribute="trailing" constant="14" id="Gpz-5a-HoB"/>
-                                    <constraint firstItem="gqk-k5-Eeh" firstAttribute="top" secondItem="HUO-xt-TbC" secondAttribute="top" constant="33" id="X2U-QX-xHt"/>
-                                    <constraint firstAttribute="bottom" secondItem="gqk-k5-Eeh" secondAttribute="bottom" constant="33" id="aJ0-Rn-gVb"/>
-                                    <constraint firstItem="VVs-p6-hf1" firstAttribute="top" secondItem="HUO-xt-TbC" secondAttribute="top" constant="52" id="jH0-YD-Ss6"/>
-                                    <constraint firstAttribute="bottom" secondItem="VVs-p6-hf1" secondAttribute="bottom" constant="52" id="tJY-ui-rMB"/>
-                                    <constraint firstAttribute="trailing" secondItem="gqk-k5-Eeh" secondAttribute="trailing" constant="15" id="yJF-bc-eg9"/>
+                                    <constraint firstItem="gqk-k5-Eeh" firstAttribute="leading" secondItem="HUO-xt-TbC" secondAttribute="leading" constant="30" id="5Ro-XJ-Ph3"/>
+                                    <constraint firstAttribute="bottom" secondItem="gqk-k5-Eeh" secondAttribute="bottom" constant="30" id="N8d-Jy-3np"/>
+                                    <constraint firstAttribute="trailing" secondItem="gqk-k5-Eeh" secondAttribute="trailing" constant="30" id="OhG-yc-Z3c"/>
+                                    <constraint firstItem="gqk-k5-Eeh" firstAttribute="top" secondItem="HUO-xt-TbC" secondAttribute="top" constant="30" id="PiU-50-vUk"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -64,7 +55,7 @@
                         <constraints>
                             <constraint firstItem="HUO-xt-TbC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="CO3-Cx-DSE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HUO-xt-TbC" secondAttribute="trailing" constant="25" id="SwC-ZB-hQx"/>
-                            <constraint firstItem="HUO-xt-TbC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="VcY-Ur-yuD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HUO-xt-TbC" secondAttribute="bottom" constant="25" id="TSc-w2-Iab"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ee-kN-UXs"/>
@@ -75,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="-35"/>
+            <point key="canvasLocation" x="849.76744186046506" y="-35.407725321888414"/>
         </scene>
         <!--ChangedVC-->
         <scene sceneID="PWh-io-qdo">
@@ -337,6 +328,7 @@
                         <outlet property="greenColorTF" destination="alA-5B-o3v" id="cnU-81-rVc"/>
                         <outlet property="hexColorTF" destination="kmd-UC-sKv" id="33L-Y2-ntR"/>
                         <outlet property="mainView" destination="IOP-S6-FAu" id="HSI-Gd-VXx"/>
+                        <outlet property="navBar" destination="rpl-HA-7lX" id="Zkw-bl-FMU"/>
                         <outlet property="opacitySlider" destination="NRe-gK-tY7" id="B0T-6B-iqz"/>
                         <outlet property="opacityTF" destination="Fdc-K3-DTe" id="42f-p3-n5A"/>
                         <outlet property="redColorSlider" destination="buY-9K-HXn" id="XQh-Zq-8PU"/>
