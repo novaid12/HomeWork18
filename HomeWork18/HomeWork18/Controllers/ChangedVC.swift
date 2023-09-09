@@ -7,22 +7,22 @@
 
 import UIKit
 
-class ChangedVC: UIViewController {
+final class ChangedVC: UIViewController {
     var colorModel: ColorModel?
     var delegate: ColorBGUpdateProtocol?
     var complitonHandler: ((ColorModel) -> ())?
-
+    // red Color Items
     @IBOutlet var redColorSlider: UISlider!
     @IBOutlet var redColorTF: UITextField!
-
+    // green Color Items
     @IBOutlet var greenColorSlider: UISlider!
     @IBOutlet var greenColorTF: UITextField!
-
+    // blue Color Items
     @IBOutlet var blueColorSlider: UISlider!
     @IBOutlet var blueColorTF: UITextField!
-
+    // hex Color
     @IBOutlet var hexColorTF: UITextField!
-
+    // opacity Items
     @IBOutlet var opacitySlider: UISlider!
     @IBOutlet var opacityTF: UITextField!
 
@@ -33,12 +33,11 @@ class ChangedVC: UIViewController {
     @IBOutlet var saveClosure: UIButton!
     @IBOutlet var centerContraints: NSLayoutConstraint!
 
-
     override func viewDidLoad() {
         SetupUI()
     }
 
-    func SetupUI() {
+    private func SetupUI() {
         hideKeyboardWhenTappedAround()
         startKeyboardObserver()
         redColorSlider.value = 1
@@ -90,7 +89,10 @@ class ChangedVC: UIViewController {
     }
 
     private func updateColorSlider() {
-        let cM = ColorModel(red: CGFloat(redColorSlider.value), green: CGFloat(greenColorSlider.value), blue: CGFloat(blueColorSlider.value), alpha: CGFloat(opacitySlider.value))
+        let cM = ColorModel(red: CGFloat(redColorSlider.value),
+                            green: CGFloat(greenColorSlider.value),
+                            blue: CGFloat(blueColorSlider.value),
+                            alpha: CGFloat(opacitySlider.value))
         redColorTF.text = Int(cM.red * 255).description
         greenColorTF.text = Int(cM.green * 255).description
         blueColorTF.text = Int(cM.blue * 255).description
@@ -115,10 +117,12 @@ class ChangedVC: UIViewController {
                             blue: CGFloat(blueColor / 255.0),
                             alpha: CGFloat(opacity / 100.0))
 
-        hexColorTF.text = String(format: "%02X%02X%02X%02X", Int(cM.red * 255), Int(cM.green * 255),
-                                 Int(cM.blue * 255), Int(cM.alpha * 255))
+        hexColorTF.text = String(format: "%02X%02X%02X%02X",
+                                 Int(cM.red * 255),
+                                 Int(cM.green * 255),
+                                 Int(cM.blue * 255),
+                                 Int(cM.alpha * 255))
         redColorSlider.value = Float(cM.red)
-
         greenColorSlider.value = Float(cM.green)
         blueColorSlider.value = Float(cM.blue)
         opacitySlider.value = Float(cM.alpha)
@@ -176,13 +180,19 @@ class ChangedVC: UIViewController {
     }
 
     @IBAction func saveWithDelegates() {
-        delegate?.onColorUpdate(color: ColorModel(red: CGFloat(redColorSlider.value), green: CGFloat(greenColorSlider.value), blue: CGFloat(blueColorSlider.value), alpha: CGFloat(opacitySlider.value)))
+        delegate?.onColorUpdate(color: ColorModel(red: CGFloat(redColorSlider.value),
+                                                  green: CGFloat(greenColorSlider.value),
+                                                  blue: CGFloat(blueColorSlider.value),
+                                                  alpha: CGFloat(opacitySlider.value)))
         dismiss(animated: true)
     }
 
     @IBAction func saveWithClouser() {
         guard let complitonHandler = complitonHandler else { return }
-        complitonHandler(ColorModel(red: CGFloat(redColorSlider.value), green: CGFloat(greenColorSlider.value), blue: CGFloat(blueColorSlider.value), alpha: CGFloat(opacitySlider.value)))
+        complitonHandler(ColorModel(red: CGFloat(redColorSlider.value),
+                                    green: CGFloat(greenColorSlider.value),
+                                    blue: CGFloat(blueColorSlider.value),
+                                    alpha: CGFloat(opacitySlider.value)))
         dismiss(animated: true)
     }
 }
