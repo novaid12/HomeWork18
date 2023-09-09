@@ -32,7 +32,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Change Background Color">
                                             <imageReference key="image" image="paintbrush.pointed" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
-                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseForegroundColor" name="Font Color"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -328,7 +328,6 @@
                         <outlet property="greenColorTF" destination="alA-5B-o3v" id="cnU-81-rVc"/>
                         <outlet property="hexColorTF" destination="kmd-UC-sKv" id="33L-Y2-ntR"/>
                         <outlet property="mainView" destination="IOP-S6-FAu" id="HSI-Gd-VXx"/>
-                        <outlet property="navBar" destination="rpl-HA-7lX" id="Zkw-bl-FMU"/>
                         <outlet property="opacitySlider" destination="NRe-gK-tY7" id="B0T-6B-iqz"/>
                         <outlet property="opacityTF" destination="Fdc-K3-DTe" id="42f-p3-n5A"/>
                         <outlet property="redColorSlider" destination="buY-9K-HXn" id="XQh-Zq-8PU"/>
@@ -364,6 +363,9 @@
         <image name="paintbrush.pointed" catalog="system" width="128" height="118"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Font Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
