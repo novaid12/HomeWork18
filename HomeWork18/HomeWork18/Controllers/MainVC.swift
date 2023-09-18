@@ -12,11 +12,17 @@ protocol ColorBGUpdateProtocol {
 }
 
 class MainVC: UIViewController {
+    @IBOutlet weak var changeBGBtn: UIButton!
+    @IBOutlet weak var mainView: UIView!
     var colorModel: ColorModel?
+    
+    override func viewDidLoad() {
+        mainView.roundCorners([.topLeft, .bottomRight], radius: 50)
+        changeBGBtn.roundCorners([.topLeft, .bottomRight], radius: 50)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
-        guard let colorModel = colorModel else { return }
-        view.backgroundColor = UIColor(red: colorModel.red, green: colorModel.green, blue: colorModel.blue, alpha: colorModel.alpha)
     }
 
     @IBAction func changedBGAction(_ sender: UIButton) {
@@ -24,10 +30,11 @@ class MainVC: UIViewController {
         guard let changedVC = stor.instantiateViewController(withIdentifier: "ChangedVC") as? ChangedVC else { return }
         changedVC.colorModel = colorModel
         changedVC.delegate = self
-        changedVC.complitonHandler = { [weak self] newColor in
-            self?.colorModel = newColor
+        changedVC.complitonHandler = { [weak self] colorModel in
+            self?.colorModel = colorModel
+            self?.view.backgroundColor = UIColor(red: colorModel.red, green: colorModel.green, blue: colorModel.blue, alpha: colorModel.alpha)
         }
-        navigationController?.pushViewController(changedVC, animated: true)
+        present(changedVC, animated: true)
     }
 }
 
